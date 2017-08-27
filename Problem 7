@@ -1,0 +1,30 @@
+
+
+#include <iostream>
+using namespace std;
+
+int counter=1;
+int primeNo=3;
+
+int main() {
+    
+    for (int i=primeNo; i!=false ; i++) {
+        if ((i%2)!=0) {
+            for (int j=i-1; j>1; j--) {
+                if ((i%j)==0) {
+                    break;
+                }
+                else if (j==2) {
+                    counter++;
+                    primeNo=i;
+                }
+            }
+        }
+        if (counter==10001) {
+            break;
+        }
+    }
+    
+    cout<<"The 10 001st prime number is: "<<primeNo<<endl;
+    
+}
